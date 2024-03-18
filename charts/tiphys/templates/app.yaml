@@ -20,9 +20,6 @@ spec:
     metadata:
       labels:
         name: {{ include "opszero.fullname" $ }}-{{ $job.name }}
-        {{- if $app.service.labelsRaw }}
-          {{- toYaml $app.service.labelsRaw | nindent 8 }}
-        {{- end }}
     spec:
       restartPolicy: Never
       {{- if $app.imagePullSecrets }}
@@ -134,6 +131,9 @@ spec:
         tags.datadoghq.com/env: {{ $.Values.datadog.envName | quote }}
         tags.datadoghq.com/service: {{ include "opszero.fullname" $ }}-{{ $app.name }}
         tags.datadoghq.com/version: {{ $.Values.datadog.version | quote }}
+      {{- end }}
+      {{- if $app.service.labelsRaw }}
+        {{- toYaml $app.service.labelsRaw | nindent 8 }}
       {{- end }}
     spec:
       automountServiceAccountToken: false
