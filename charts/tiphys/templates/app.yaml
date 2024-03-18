@@ -21,7 +21,7 @@ spec:
       labels:
         name: {{ include "opszero.fullname" $ }}-{{ $job.name }}
         {{- if $app.service.labelsRaw }}
-          {{- toYaml $app.service.labelsRaw | nindent 10 }}
+          {{- toYaml $app.service.labelsRaw | nindent 8 }}
         {{- end }}
     spec:
       restartPolicy: Never
