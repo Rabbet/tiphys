@@ -3,17 +3,47 @@ entries:
   tiphys:
   - apiVersion: v2
     appVersion: 1.16.3
-    created: "2024-03-18T14:15:44.929455-05:00"
+    created: "2024-03-18T14:32:09.854447-05:00"
     dependencies:
     - condition: redis.enabled
       name: redis
       repository: https://charts.bitnami.com/bitnami
       version: 17.3.11
     description: A High Level Helm Chart
-    digest: d3d9002a65a13b9c6b7bdb05b981047f0460ad17e958a1ef5750d06ccc185712
+    digest: 6b102ff12e5075d654616a969ba6ea01b5bd4c87e8de48f384c6473e0c1e24d9
+    name: tiphys
+    type: application
+    urls:
+    - https://rabbet.github.io/tiphys/tiphys-0.9.26.tgz
+    version: 0.9.26
+  - apiVersion: v2
+    appVersion: 1.16.3
+    created: "2024-03-18T14:32:09.851547-05:00"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 17.3.11
+    description: A High Level Helm Chart
+    digest: 78aa07ae65cf5423cbc698efa2619211f84a3e7223e79ae78b9e964530e569b4
+    name: tiphys
+    type: application
+    urls:
+    - https://rabbet.github.io/tiphys/tiphys-0.9.25.tgz
+    version: 0.9.25
+  - apiVersion: v2
+    appVersion: 1.16.3
+    created: "2024-03-18T14:32:09.84715-05:00"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 17.3.11
+    description: A High Level Helm Chart
+    digest: 85ad020c914532f9dc3d8d9ef0107df917d4f99c8e9bdb77da8f75dd3acd0f07
     name: tiphys
     type: application
     urls:
     - https://rabbet.github.io/tiphys/tiphys-0.9.24.tgz
     version: 0.9.24
-generated: "2024-03-18T14:15:44.926674-05:00"
+generated: "2024-03-18T14:32:09.843129-05:00"
