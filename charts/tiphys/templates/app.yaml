@@ -20,6 +20,9 @@ spec:
     metadata:
       labels:
         name: {{ include "opszero.fullname" $ }}-{{ $job.name }}
+        {{- if $.Values.labelsRaw }}
+          {{- toYaml $.Values.labelsRaw | nindent 10 }}
+        {{- end }}
     spec:
       restartPolicy: Never
       {{- if $app.imagePullSecrets }}
